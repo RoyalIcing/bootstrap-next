@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-react",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Patrick Smith <pgwsmith@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^2.3.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}

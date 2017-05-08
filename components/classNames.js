@@ -1,0 +1,1 @@
+export default (items) => items.filter(Boolean).join(' ')
