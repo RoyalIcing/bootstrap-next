@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../Button'
 import Router from 'next/router'
+import Button from '../components/Button'
 
 export default class SearchForm extends React.Component {
   static defaultProps = {

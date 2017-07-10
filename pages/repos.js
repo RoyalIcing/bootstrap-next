@@ -8,26 +8,29 @@ import Button from '../components/Button'
 import ButtonGroup from '../components/ButtonGroup'
 import PrimaryNav from '../molecules/PrimaryNav'
 import Repo from '../components/Repos/Repo'
-import SearchForm from '../components/Repos/SearchForm'
+import SearchForm from '../organisms/SearchForm'
 import * as gitHubSearch from '../api/github/search'
 
 const ReposPage = ({
   totalCount,
   repos,
-  url
-}) => (
-    <Main>
+  url: { query: { term, language } }
+}) => {
+  const [
+    title,
+    heading
+  ] = !!repos ? [
+    `Search repos for ‘${ term }’`,
+    `${ totalCount } repos found for ‘${ term }’`
+  ] : [
+    'Search repos',
+    'Search repos'
+  ]
+  return (
+    <Main title={ title }>
         <PrimaryNav />
-        <Primary>
-        {
-          !!repos ? (
-            <span>{ totalCount } repos</span>
-          ) : (
-            'Search repos'
-          )
-        }
-        </Primary>
-        <SearchForm initialTerm={ url.query.term } initialLanguage={ url.query.language } />
+        <Primary>{ heading }</Primary>
+        <SearchForm initialTerm={ term } initialLanguage={ language } />
         <Row>
             <Col>
             {
@@ -38,7 +41,8 @@ const ReposPage = ({
             </Col>
         </Row>
     </Main>
-)
+  )
+}
 
 // Loaded on server for initial request, client otherwise
 ReposPage.getInitialProps = async ({

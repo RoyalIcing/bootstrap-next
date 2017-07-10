@@ -308,7 +308,7 @@ babel-code-frame@^6.20.0, babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@6.25.0, babel-core@^6.24.1:
+babel-core@6.25.0, babel-core@^6.24.1, babel-core@^6.25.0:
   version "6.25.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.25.0.tgz#7dd42b0463c742e9d5296deb3ec67a9322dad729"
   dependencies:
@@ -481,6 +481,14 @@ babel-plugin-module-resolver@2.6.2:
     find-babel-config "^1.0.1"
     glob "^7.1.1"
     resolve "^1.3.2"
+
+babel-plugin-preval@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-preval/-/babel-plugin-preval-1.3.0.tgz#e473737933c841fb17447e24fb899fc7f28a0758"
+  dependencies:
+    babel-core "^6.25.0"
+    babylon "^6.17.4"
+    require-from-string "^1.2.1"
 
 babel-plugin-react-require@3.0.0:
   version "3.0.0"
@@ -849,7 +857,7 @@ babel-runtime@6.23.0, babel-runtime@^6.18.0, babel-runtime@^6.20.0, babel-runtim
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-template@6.25.0, babel-template@^6.25.0, babel-template@^6.7.0:
+babel-template@6.25.0, babel-template@^6.24.1, babel-template@^6.25.0, babel-template@^6.7.0:
   version "6.25.0"
   resolved "https://registry.yarnpkg.com/babel-template/-/babel-template-6.25.0.tgz#665241166b7c2aa4c619d71e192969552b10c071"
   dependencies:
@@ -857,16 +865,6 @@ babel-template@6.25.0, babel-template@^6.25.0, babel-template@^6.7.0:
     babel-traverse "^6.25.0"
     babel-types "^6.25.0"
     babylon "^6.17.2"
-    lodash "^4.2.0"
-
-babel-template@^6.24.1:
-  version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-template/-/babel-template-6.24.1.tgz#04ae514f1f93b3a2537f2a0f60a5a45fb8308333"
-  dependencies:
-    babel-runtime "^6.22.0"
-    babel-traverse "^6.24.1"
-    babel-types "^6.24.1"
-    babylon "^6.11.0"
     lodash "^4.2.0"
 
 babel-traverse@6.21.0:
@@ -883,21 +881,7 @@ babel-traverse@6.21.0:
     invariant "^2.2.0"
     lodash "^4.2.0"
 
-babel-traverse@^6.24.1:
-  version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-traverse/-/babel-traverse-6.24.1.tgz#ab36673fd356f9a0948659e7b338d5feadb31695"
-  dependencies:
-    babel-code-frame "^6.22.0"
-    babel-messages "^6.23.0"
-    babel-runtime "^6.22.0"
-    babel-types "^6.24.1"
-    babylon "^6.15.0"
-    debug "^2.2.0"
-    globals "^9.0.0"
-    invariant "^2.2.0"
-    lodash "^4.2.0"
-
-babel-traverse@^6.25.0:
+babel-traverse@^6.24.1, babel-traverse@^6.25.0:
   version "6.25.0"
   resolved "https://registry.yarnpkg.com/babel-traverse/-/babel-traverse-6.25.0.tgz#2257497e2fcd19b89edc13c4c91381f9512496f1"
   dependencies:
@@ -920,16 +904,7 @@ babel-types@6.23.0:
     lodash "^4.2.0"
     to-fast-properties "^1.0.1"
 
-babel-types@^6.19.0, babel-types@^6.21.0, babel-types@^6.24.1:
-  version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.24.1.tgz#a136879dc15b3606bda0d90c1fc74304c2ff0975"
-  dependencies:
-    babel-runtime "^6.22.0"
-    esutils "^2.0.2"
-    lodash "^4.2.0"
-    to-fast-properties "^1.0.1"
-
-babel-types@^6.25.0:
+babel-types@^6.19.0, babel-types@^6.21.0, babel-types@^6.24.1, babel-types@^6.25.0:
   version "6.25.0"
   resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.25.0.tgz#70afb248d5660e5d18f811d91c8303b54134a18e"
   dependencies:
@@ -942,11 +917,7 @@ babylon@6.14.1:
   version "6.14.1"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.14.1.tgz#956275fab72753ad9b3435d7afe58f8bf0a29815"
 
-babylon@^6.11.0, babylon@^6.15.0:
-  version "6.17.0"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.17.0.tgz#37da948878488b9c4e3c4038893fa3314b3fc932"
-
-babylon@^6.17.2:
+babylon@^6.11.0, babylon@^6.17.2, babylon@^6.17.4:
   version "6.17.4"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.17.4.tgz#3e8b7402b88d22c3423e137a1577883b15ff869a"
 
@@ -1451,13 +1422,13 @@ debug@2.6.7:
   dependencies:
     ms "2.0.0"
 
-debug@^2.1.1, debug@^2.2.0, debug@^2.4.5:
+debug@^2.1.1, debug@^2.4.5:
   version "2.6.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.6.tgz#a9fa6fbe9ca43cf1e79f73b75c0189cbb7d6db5a"
   dependencies:
     ms "0.7.3"
 
-debug@^2.6.8:
+debug@^2.2.0, debug@^2.6.8:
   version "2.6.8"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
@@ -2268,6 +2239,14 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
+highlight.js@~9.12.0:
+  version "9.12.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
+
+highlight.js@~9.8.0:
+  version "9.8.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.8.0.tgz#38eeef40cd45eaddbec8c9e5238fb7a783a3b685"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -2732,6 +2711,12 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
 lowercase-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
+
+lowlight@^1.5.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/lowlight/-/lowlight-1.9.0.tgz#6eccfb20f9125a56a82032083967998b5ba19905"
+  dependencies:
+    highlight.js "~9.12.0"
 
 lru-cache@^4.0.1:
   version "4.0.2"
@@ -3366,18 +3351,12 @@ prompt@1.0.0:
     utile "0.3.x"
     winston "2.1.x"
 
-prop-types@15.5.10, prop-types@^15.5.4:
+prop-types@15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@~15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
-
-prop-types@^15.5.7, prop-types@~15.5.7:
-  version "15.5.7"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.7.tgz#231c4f29cdd82e355011d4889386ca9059544dd1"
-  dependencies:
-    fbjs "^0.8.9"
 
 protobufjs@^5.0.0:
   version "5.0.2"
@@ -3432,11 +3411,11 @@ pumpify@^1.3.3:
     inherits "^2.0.1"
     pump "^1.0.0"
 
-punycode@1.3.2:
+punycode@1.3.2, punycode@^1.2.4:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
 
-punycode@^1.2.4, punycode@^1.4.1:
+punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
@@ -3517,6 +3496,14 @@ react-proxy@^3.0.0-alpha.0:
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-3.0.0-alpha.1.tgz#4400426bcfa80caa6724c7755695315209fa4b07"
   dependencies:
     lodash "^4.6.1"
+
+react-syntax-highlighter@^5.6.2:
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-5.6.2.tgz#01f5ad3cc44c40c26b6fb4e00a4bed90f66304c5"
+  dependencies:
+    babel-runtime "^6.18.0"
+    highlight.js "~9.8.0"
+    lowlight "^1.5.0"
 
 react@^15.5.4:
   version "15.5.4"
@@ -3722,6 +3709,10 @@ request@^2.61.0, request@^2.72.0, request@^2.74.0, request@^2.79.0, request@^2.8
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
+
+require-from-string@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/require-from-string/-/require-from-string-1.2.1.tgz#529c9ccef27380adfec9a2f965b649bbee636418"
 
 require-main-filename@^1.0.1:
   version "1.0.1"
@@ -4321,11 +4312,11 @@ utils-merge@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.0.tgz#0294fb922bb9375153541c4f7096231f287c8af8"
 
-uuid@3.0.1, uuid@^3.0.0:
+uuid@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
-uuid@3.1.0:
+uuid@3.1.0, uuid@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
