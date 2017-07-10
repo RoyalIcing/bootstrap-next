@@ -1,3 +1,3 @@
 import { Component } from 'react'
 
-export default (props) => <div {...props} className='row' />
+export default ({ className, children }) => <div children={ children } className={ ['row', className || ''].join(' ') } />

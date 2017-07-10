@@ -31,10 +31,5 @@ const Nav = ({
         children={ children }
     />
 )
-Nav.Link = ({ children, active = false, disabled = false, ...rest }) => (
-    <Link { ...rest }>
-        <a className={ classNames(['nav-link nav-item', active && 'active', disabled && 'disabled']) }>{ children }</a>
-    </Link>
-)
 
 export default Nav

@@ -5,9 +5,11 @@
   "author": "Patrick Smith <pgwsmith@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "next": "^2.3.1",
+    "axios": "^0.16.2",
+    "next": "beta",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-syntax-highlighter": "^5.6.2"
   },
   "scripts": {
     "dev": "next",
@@ -15,6 +17,7 @@
     "start": "next start"
   },
   "devDependencies": {
-    "@google-cloud/functions-emulator": "1.0.0-alpha.18"
+    "@google-cloud/functions-emulator": "1.0.0-alpha.18",
+    "babel-plugin-preval": "^1.3.0"
   }
 }
