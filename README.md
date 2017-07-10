@@ -2,4 +2,4 @@
 - Server side rendering — great for fast experience and SEO
 - No React Router needed!
 - Can create static websites
-- Can create component libraries easily with pre
+- Can create component libraries easily with preval
