@@ -7,7 +7,7 @@ import Primary from '../components/Primary'
 import Button from '../components/Button'
 import ButtonGroup from '../components/ButtonGroup'
 import PrimaryNav from '../molecules/PrimaryNav'
-import Repo from '../components/Repos/Repo'
+import ReposList from '../molecules/ReposList'
 import SearchForm from '../organisms/SearchForm'
 import * as gitHubSearch from '../api/github/search'
 
@@ -34,9 +34,7 @@ const ReposPage = ({
         <Row>
             <Col>
             {
-              !!repos && repos.map(repo => (
-                <Repo key={ repo.id } repo={ repo } />
-              ))
+              !!repos && <ReposList repos={ repos } />
             }
             </Col>
         </Row>
