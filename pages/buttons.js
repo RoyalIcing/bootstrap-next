@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Main from '../components/Main'
+import Main from '../organisms/Main'
 import Row from '../components/Row'
 import Col from '../components/Col'
 import Primary from '../components/Primary'
@@ -8,12 +8,12 @@ import ButtonGroup from '../components/ButtonGroup'
 import PrimaryNav from '../molecules/PrimaryNav'
 
 export default () => (
-    <Main>
+    <Main title='Bootstrap 4 Buttons'>
         <PrimaryNav />
         <Primary>Buttons</Primary>
-        <Row>
+        <Row className='mb-3'>
             <Col>
-                <Button type='primary'>Primary</Button> <Button type='secondary'>Secondary</Button> <Button type='success'>Success</Button> <Button type='danger'>Danger</Button> <Button type='warning'>Warning</Button> <Button type='info'>Info</Button> <Button type='link'>Link</Button>
+                <Button variation='primary'>Primary</Button> <Button variation='secondary'>Secondary</Button> <Button variation='success'>Success</Button> <Button variation='danger'>Danger</Button> <Button variation='warning'>Warning</Button> <Button variation='info'>Info</Button> <Button variation='link'>Link</Button>
             </Col>
         </Row>
         <Row>

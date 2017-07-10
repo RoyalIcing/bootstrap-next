@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Main from '../components/Main'
+import Main from '../organisms/Main'
 import Row from '../components/Row'
 import Col from '../components/Col'
 import Primary from '../components/Primary'

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Main from '../components/Main'
+import Main from '../organisms/Main'
 import Row from '../components/Row'
 import Col from '../components/Col'
 import Alert from '../components/Alert'
