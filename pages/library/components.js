@@ -12,24 +12,24 @@ registerLanguage('javascript', js)
 
 const ComponentFile = ({
   fileName,
-  contents
+  info
 }) => (
   <Row>
     <Col>
       {
-        (typeof contents === typeof '') ? (
+        (info.isFile) ? (
           <div>
             <h2>{ fileName }</h2>
+            { JSON.stringify(info.ast) }
             <SyntaxHighlighter
               language='javascript'
               style={ theme }
-              
-              children={ contents }
+              children={ info.content }
             />
           </div>
         ) : (
-          Object.keys(contents).map(fileName => (
-            <ComponentFile fileName={ fileName } contents={ contents[fileName ] } />
+          Object.keys(info).map(fileName => (
+            <ComponentFile key={ fileName } fileName={ fileName } info={ info[fileName ] } />
           ))
         )
       }
@@ -46,7 +46,10 @@ export default ({
     <h1>Components Library</h1>
   {
     Object.keys(componentFiles).map(fileName => (
-      <ComponentFile fileName={ fileName } contents={ componentFiles[fileName ] } />
+      <ComponentFile key={ fileName }
+        fileName={ fileName }
+        info={ componentFiles[fileName ] }
+      />
     ))
   }
   </Main>

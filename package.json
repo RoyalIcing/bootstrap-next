@@ -15,7 +15,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "build:static": "next build && next export"
+    "build:static": "next build && next export",
+    "deploy:now": "cd out && now --static"
   },
   "devDependencies": {
     "@google-cloud/functions-emulator": "1.0.0-alpha.18",
